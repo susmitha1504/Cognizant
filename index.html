@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Connect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    
+
+    <header>
+
+        <div class="logo">
+            <h1>Community Event Portal</h1>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#events">Events</a>
+            <a href="#register">Register</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+    
+
+    <section class="hero" id="home">
+
+        <h2>Connect, Learn and Grow Together</h2>
+
+        <p>
+            Discover exciting local events, meet like-minded people,
+            and become an active part of your community.
+        </p>
+
+        <button onclick="showMessage()">
+            Explore Events
+        </button>
+
+    </section>
+
+
+
+    <section id="about">
+
+        <h2 class="section-title">
+            About Community Connect
+        </h2>
+
+        <div class="about-box">
+
+            <p>
+                Community Connect is a platform that helps people
+                discover local events, register online and stay informed
+                about activities happening nearby.
+            </p>
+
+        </div>
+
+    </section>
+
+    
+
+    <section class="search-section">
+
+        <h2 class="section-title">
+            Search Events
+        </h2>
+
+        <input
+            type="text"
+            id="searchBox"
+            placeholder="Search an event..."
+            onkeyup="searchEvents()">
+
+    </section>
+
+
+
+    <section id="events">
+
+        <h2 class="section-title">
+            Upcoming Events
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3> Startup Meetup</h3>
+
+                <p>
+                    Meet entrepreneurs and discuss innovative ideas.
+                </p>
+
+                <p><strong>Date:</strong> 12 July 2026</p>
+
+                <button onclick="registerEvent('Startup Meetup')">
+                    Register
+                </button>
+
+            </div>
+
+            <div class="card">
+
+                <h3>AI & Technology Summit</h3>
+
+                <p>
+                    Learn the latest trends in Artificial Intelligence.
+                </p>
+
+                <p><strong>Date:</strong> 18 July 2026</p>
+
+                <button onclick="registerEvent('AI & Technology Summit')">
+                    Register
+                </button>
+
+            </div>
+
+            <div class="card">
+
+                <h3> Sustainability Workshop</h3>
+
+                <p>
+                    Explore eco-friendly practices for a greener future.
+                </p>
+
+                <p><strong>Date:</strong> 25 July 2026</p>
+
+                <button onclick="registerEvent('Sustainability Workshop')">
+                    Register
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    
+
+    <section id="register">
+
+        <h2 class="section-title">
+            Event Registration
+        </h2>
+
+        <form id="registrationForm">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Full Name"
+                required>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email Address"
+                required>
+
+            <select id="eventType" required>
+
+                <option value="">
+                    Select Event
+                </option>
+
+                <option>
+                    Startup Meetup
+                </option>
+
+                <option>
+                    AI & Technology Summit
+                </option>
+
+                <option>
+                    Sustainability Workshop
+                </option>
+
+            </select>
+
+            <textarea
+                id="message"
+                rows="5"
+                placeholder="Additional Message"
+                onkeyup="countChars()">
+            </textarea>
+
+            <p>
+                Characters :
+                <span id="count">0</span>
+            </p>
+
+            <button type="submit">
+                Submit Registration
+            </button>
+
+        </form>
+
+    </section>
+
+
+
+    <section id="contact">
+
+        <h2 class="section-title">
+            Find Nearby Events
+        </h2>
+
+        <button onclick="getLocation()">
+            Get My Location
+        </button>
+
+        <p id="location"></p>
+
+        <div class="contact-box">
+
+            <h3>Contact Us</h3>
+
+            <p>📧 communityconnect@gmail.com</p>
+
+            <p>📞 +91 9876543210</p>
+
+            <p>📍 Salem, Tamil Nadu</p>
+
+        </div>
+
+    </section>
+
+
+
+    <footer>
+
+        <p>
+            © 2026 Community Connect. All Rights Reserved.
+        </p>
+
+    </footer>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
